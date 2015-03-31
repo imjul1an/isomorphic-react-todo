@@ -1,12 +1,11 @@
-# Hodor
-
-Hodor - is an application based on [react-isomorphic-skeleton](http://git.auctionata.web/yulian.ustiyanovych/react-isomorphic-skeleton) that renders different content provided by marketing team.
+# Isomorphic react kit
+[IN DEVELOPMENT - DOESN'T WORKS YET] Kick of skeleton.
 
 # Getting started
 
 ### Clone the repo,
 ```bash
-$ https://github.com/julianusti/isomorphic-react-kit.git
+https://github.com/julianusti/isomorphic-react-kit.git
 ```
 
 ### Install [node.js](https://nodejs.org/),
