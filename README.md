@@ -43,8 +43,6 @@ $ nodemon app.js
 │   ├── /css/                   # The folder for compiled *.css output
 │   ├── /js/                    # java script
 │   │   ├── /components/        # React components
-│   │   ├── /libs/              # Internal (Auctionata) 3rd-party components
-│   │   ├── /localization/      # Localization
 │   │   ├── /utils/             # Helpers
 │   ├── /main.js                # Client-side startup script
 │   ├── /sass/                  # Styles
