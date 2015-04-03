@@ -1,5 +1,5 @@
 var config = {
-  connection: 'mongodb://app-dev-01.auctionata.web:27017,app-dev-02.auctionata.web:27017,web-mix-02.auctionata.web:27017/?replicaSet=DevSet01',
+  connection: 'mongodb://localhost:27017/tasks',
 
   applicationUrl: 'http://localhost:3012',
 

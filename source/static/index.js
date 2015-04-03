@@ -6,7 +6,7 @@ import Navigation from '../../public/js/components/navigation';
 import App from '../../public/js/components/app';
 import Footer from '../../public/js/components/footer';
 
-import modules from  '../models/modules';
+import tasks from  '../models/tasks';
 
 function response(res, body) {
   res.set({
@@ -21,7 +21,7 @@ function response(res, body) {
 function staticService(app) {
   app.get('/*', function (req, res, next) {
     async.waterfall([
-      fetchState,
+      fetchTasks,
       render
     ], function (err, body) {
       if(err) {
@@ -31,8 +31,8 @@ function staticService(app) {
       response(res, body);
     });
 
-    function fetchState(done) {
-      modules.fetch({suffixUrl: req.url}, done);
+    function fetchTasks(done) {
+      tasks.fetch({}, done);
     }
 
     function render(state, done) {
@@ -42,7 +42,7 @@ function staticService(app) {
       var footer = React.renderToString(new Footer());
 
       var stat = {nav: nav, footer: footer, app: '/build/main.js'};
-      var content = React.renderToString(new App({state: appState}));
+      var content = React.renderToString(new App({state: state}));
 
       res.render('master.ejs',
         _.extend({ content: content, state: JSON.stringify(appState)}, stat), done);

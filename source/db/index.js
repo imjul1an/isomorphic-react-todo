@@ -1,6 +1,6 @@
 import mongo from 'mongojs';
 
-var collections = ['items'];
+var collections = ['tasks'];
 
 export default function(config, connection) {
   connection = connection || 'connection';

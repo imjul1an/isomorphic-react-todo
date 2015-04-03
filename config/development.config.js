@@ -1,5 +1,5 @@
 var config = {
-  connection: 'mongodb://d-bln-088.auctionata.local:27017/',
+  connection: 'mongodb://localhost:27017/tasks',
 
   applicationUrl: 'http://localhost:3012',
 
