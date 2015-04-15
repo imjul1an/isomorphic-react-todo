@@ -46,6 +46,7 @@ function staticService(app) {
 
       res.render('master.ejs',
         _.extend({ content: content, state: JSON.stringify(appState)}, stat), done);
+
     }
   });
 }

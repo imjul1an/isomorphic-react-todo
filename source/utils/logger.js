@@ -1,4 +1,3 @@
-var util = require('util');
 var moment = require('moment');
 var winston = require('winston');
 var Elasticsearch = require('winston-elasticsearch');
@@ -21,7 +20,7 @@ var log = new winston.Logger({
       prettyPrint: true,
       silent: false,
       timestamp: function () {
-        return moment().format('MMMM Do YYYY, hh:mm:ss a');
+        return moment().format('hh:mm:ss l');
       }
     }),
     new Elasticsearch({ level: 'info' })
@@ -52,10 +51,6 @@ var logger = {
   info: function (message) {
     message = typeof message === 'string' ? message : JSON.stringify(message);
     log.info(message);
-  },
-
-  timestamptMessage: function (message) {
-    return util.format('[%s] %s', moment(), message);
   },
 
   stream: function () {

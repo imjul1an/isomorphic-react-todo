@@ -6,7 +6,6 @@ var Tasks = React.createClass({
   handleAdd: function() {
     var newTask = this.refs.newTask.getDOMNode().value;
     this.state.tasks.push({description: newTask});
-    console.log(this.state.tasks);
     this.setState({
       tasks: this.state.tasks
     });
